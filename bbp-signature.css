@@ -1,0 +1,10 @@
+#content .bbp-topic-signature,
+#content .bbp-reply-signature {
+	margin-top: -20px;
+}
+#content .bbp-topic-signature p,
+#content .bbp-reply-signature p {
+	padding: 0 0 5px 0;
+	margin: 0;
+	font-size: 12px;
+	color: #aaa;
