@@ -6,11 +6,11 @@ Requires at least: WP 3.1.1 / bbPress 2.0
 Tested up to: WP 3.3 beta 2 / bbPress 2.0
 Stable tag: 1.0
 
-This plugin adds user signature support to bbPress.
+This plugin adds user signature support to bbPress 2.0.
 
 == Description ==
 
-This plugin adds user signature support to bbPress.
+This plugin adds user signature support to bbPress 2.0.
 
 Currently, users are supported with:
 
