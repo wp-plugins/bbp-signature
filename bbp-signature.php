@@ -2,15 +2,14 @@
 /*
 Plugin Name: bbP Signature
 Plugin URI: http://arjunsk.in/bbp-signature/
-Description: This plugin allows users to add a signature below their topics and replies.
+Description: This plugin allows users to add a signature below their topics and replies with support for BuddyPress.
 Author: Arjun S Kumar
-Version: 1.0
+Version: 1.1
 Author URI: http://arjunsk.in/
 */
 
 /**
  * @todo add max length feature at admin panel.
- * @todo add support for BuddyPress forums
  *
 */
 
@@ -77,7 +76,12 @@ function bbp_reply_content_append_user_signature( $content = '', $reply_id = 0, 
 	// Verify topic id, get author id, and potential signature
 	$reply_id  = bbp_get_reply_id       ( $reply_id );
 	$user_id   = bbp_get_reply_author_id( $reply_id );
-	$signature = bbp_get_user_signature ( $user_id  );
+	if(function_exists('bp_has_groups')) {
+		$signature = xprofile_get_field_data( 'Signature', $user_id );
+	}
+	else {
+		$signature = bbp_get_user_signature ( $user_id  );
+	}
 
 	// If signature exists, adjust the content accordingly
 	if ( !empty( $signature ) )
@@ -105,8 +109,13 @@ function bbp_topic_content_append_user_signature( $content = '', $topic_id = 0, 
 	// Verify topic id, get author id, and potential signature
 	$topic_id  = bbp_get_topic_id       ( $topic_id );
 	$user_id   = bbp_get_topic_author_id( $topic_id );
-	$signature = bbp_get_user_signature ( $user_id  );
-
+	if(function_exists('bp_has_groups')) {
+		$signature = xprofile_get_field_data( 'Signature', $user_id );
+	}
+	else {
+		$signature = bbp_get_user_signature ( $user_id  );
+	}
+	
 	// If signature exists, adjust the content accordingly
 	if ( !empty( $signature ) )
 		$content = $content . $separator . $before . $signature . $after;
