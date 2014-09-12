@@ -5,7 +5,7 @@ Tags: bbpress, forums, discussion, custom, signature
 Requires at least: WP 3.1.1 / bbPress 2.0 / BuddyPress 1.5+
 Tested up to: 4.0
 
-Stable tag: 1.1
+Stable tag: 1.2
 
 This plugin adds user signature support to bbPress 2.0. 
 
