@@ -4,7 +4,7 @@ Plugin Name: bbP Signature
 Plugin URI: http://arjunsk.in/bbp-signature/
 Description: This plugin allows users to add a signature below their topics and replies with support for BuddyPress.
 Author: Arjun S Kumar
-Version: 1.1
+Version: 1.2
 Author URI: http://arjunsk.in/
 */
 
